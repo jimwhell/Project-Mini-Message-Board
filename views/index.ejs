@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <ul>
+      <% messages.forEach((message) => { %>
+      <li>
+        <strong>New Message From:<%= message.user %></strong>
+        
+      </li>
+      <% }) %>
+    </ul> -->
+    <div class="messages-container">
+      <% messages.forEach((message) => { %>
+      <div class="message">
+        <div class="message-header">
+          <h2>New Message From: <%= message.user %></h2>
+        </div>
+        <div class="content">
+          <p><%= message.text %></p>
+        </div>
+        <div class="date-container">
+          <p><%= message.added %></p>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>

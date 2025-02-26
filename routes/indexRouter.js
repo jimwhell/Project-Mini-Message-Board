@@ -14,12 +14,23 @@ const messages = [
   },
 ];
 
+const links = [
+  {
+    name: "Home",
+    route: "/",
+  },
+  {
+    name: "Add New Message",
+    route: "/new",
+  },
+];
+
 router.get("/", (req, res) => {
-  res.render("index", { messages: messages });
+  res.render("index", { messages: messages, links: links });
 });
 
 router.get("/new", (req, res) => {
-  res.render("form");
+  res.render("form", { links: links });
 });
 
 router.post("/new", (req, res) => {

@@ -7,17 +7,20 @@
 
     <div class="messages-container">
       <% messages.forEach((message) => { %>
-      <div class="message">
-        <div class="message-header">
-          <h2>New Message From: <%= message.user %></h2>
+      <a href="message/<%= message.id %>">
+        <div class="message">
+          <div class="message-header">
+            <h2>New Message From: <%= message.user %></h2>
+            <p><%= message.id %></p>
+          </div>
+          <div class="content">
+            <p><%= message.text %></p>
+          </div>
+          <div class="date-container">
+            <p><%= message.added %></p>
+          </div>
         </div>
-        <div class="content">
-          <p><%= message.text %></p>
-        </div>
-        <div class="date-container">
-          <p><%= message.added %></p>
-        </div>
-      </div>
+      </a>
       <% }) %>
     </div>
   </body>

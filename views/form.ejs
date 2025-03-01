@@ -1,14 +1,24 @@
-<%- include('navbar', {links: links}) %>
-<form action="/new" method="POST">
-  <h1>Send A New Message</h1>
-  <label for="authorName">Author Name</label>
-  <input type="text" id="authorName" name="authorName" />
+<html>
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <%- include('navbar', {links: links}) %>
+    <div class="form-container">
+      <form action="/new" method="POST">
+        <h1>Send A New Message</h1>
+        <label for="authorName">Author Name</label>
+        <input type="text" id="authorName" name="authorName" />
 
-  <label for="message">Message</label>
-  <textarea
-    name="message"
-    id="message"
-    placeholder="Write a message"
-  ></textarea>
-  <button type="submit">Send</button>
-</form>
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Write a message"
+        ></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+</html>

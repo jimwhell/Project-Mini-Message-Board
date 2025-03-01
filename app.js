@@ -10,7 +10,8 @@ app.use("/", indexRouter);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-const PORT = 4000;
+
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
   console.log(`Server is listening at port ${PORT}`);
